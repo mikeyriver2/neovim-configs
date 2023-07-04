@@ -4,3 +4,5 @@
 !nvim
 !tmux
 !coc
+
+node_modules
