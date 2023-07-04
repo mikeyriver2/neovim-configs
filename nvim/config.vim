@@ -50,4 +50,4 @@ Plug 'hrsh7th/nvim-cmp'
 
 call plug#end()
 
-
+nmap <F6> :NERDTreeToggle<CR>
