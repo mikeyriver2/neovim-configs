@@ -75,3 +75,4 @@ let g:clipboard = {
     \ }
 
 nmap <F6> :NERDTreeToggle<CR>
+nnoremap <C-a> ggVG
