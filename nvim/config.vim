@@ -14,14 +14,14 @@ set wildmode=longest,list   " get bash-like tab completions
 filetype plugin indent on   "allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
 set mouse=a                 " enable mouse click
-set clipboard=unnamedplus   " using system clipboard
+set clipboard+=unnamedplus   " using system clipboard
 filetype plugin on
 set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
 " set spell                 " enable spell check (may need to download
 " language package)
-" " set noswapfile            " disable creating swap file
-" " set backupdir=~/.cache/vim " Directory to store backup files.
+set noswapfile            " disable creating swap file
+set backupdir=~/.cache/vim " Directory to store backup files.
 
 call plug#begin()
 
@@ -60,5 +60,18 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
 call plug#end()
+
+let g:clipboard = {
+    \   'name': 'win32yank-wsl',
+    \   'copy': {
+    \      '+': 'win32yank.exe -i --crlf',
+    \      '*': 'win32yank.exe -i --crlf',
+    \    },
+    \   'paste': {
+    \      '+': 'win32yank.exe -o --lf',
+    \      '*': 'win32yank.exe -o --lf',
+    \   },
+    \   'cache_enabled': 0,
+    \ }
 
 nmap <F6> :NERDTreeToggle<CR>
