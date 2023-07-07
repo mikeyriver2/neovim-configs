@@ -2,6 +2,7 @@ set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching 
 set ignorecase              " case insensitive 
 set mouse=v                 " middle-click paste with 
+set noautochdir
 set hlsearch                " highlight search 
 set incsearch               " incremental search
 set tabstop=2               " number of columns occupied by a tab 
@@ -60,8 +61,11 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
+Plug 'airblade/vim-rooter'
+
 Plug 'prisma/vim-prisma'
 Plug 'pantharshit00/coc-prisma'
+Plug 'danymat/neogen'
 
 call plug#end()
 
@@ -82,5 +86,6 @@ map <F6> :NERDTreeToggle<CR>
 nnoremap <C-a> ggVG
 autocmd BufEnter * lcd %:p:h
 map <leader>r :NERDTreeFind<cr>
+noremap <Del> "_dd
 
 let NERDTreeShowHidden=1
