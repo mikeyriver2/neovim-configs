@@ -67,6 +67,8 @@ Plug 'prisma/vim-prisma'
 Plug 'pantharshit00/coc-prisma'
 Plug 'danymat/neogen'
 
+Plug 'folke/trouble.nvim'
+
 call plug#end()
 
 let g:clipboard = {
