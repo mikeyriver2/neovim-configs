@@ -7,4 +7,5 @@ require('telescope_map')
 require('indenting')
 -- require('tree-sit')
 require('lualine').setup()
-
+require('trouble_diag')
+require('treenerdy')
