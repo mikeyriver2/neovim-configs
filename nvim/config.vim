@@ -88,6 +88,6 @@ map <F6> :NERDTreeToggle<CR>
 nnoremap <C-a> ggVG
 autocmd BufEnter * lcd %:p:h
 map <leader>r :NERDTreeFind<cr>
-noremap <Del> "_dd
+noremap <Del> "_d
 
 let NERDTreeShowHidden=1
