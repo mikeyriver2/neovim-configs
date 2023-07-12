@@ -32,8 +32,8 @@ call plug#begin()
 " Plug 'yuezk/vim-js'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'maxmellon/vim-jsx-pretty'
+" Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'maxmellon/vim-jsx-pretty'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'vimpostor/vim-tpipeline'
 Plug 'neovim/nvim-lspconfig'

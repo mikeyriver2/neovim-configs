@@ -1,4 +1,8 @@
 vim.diagnostic.config({ virtual_text = true })
+for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
+        vim.api.nvim_set_hl(0, group, {})
+end
+
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
@@ -13,6 +17,10 @@ require'lspconfig'.tsserver.setup {
 
 require'lspconfig'.prismals.setup {
   capabilities = capabilities,
+}
+
+require'lspconfig'.cssls.setup{
+  capabilities = capabilities
 }
 
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
