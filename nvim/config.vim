@@ -68,6 +68,7 @@ Plug 'pantharshit00/coc-prisma'
 Plug 'danymat/neogen'
 
 Plug 'folke/trouble.nvim'
+Plug 'jose-elias-alvarez/null-ls.nvim'
 
 call plug#end()
 
@@ -97,4 +98,3 @@ map <leader>r :NERDTreeFind<cr>
 noremap <Del> "_d
 
 let NERDTreeShowHidden=1
-
