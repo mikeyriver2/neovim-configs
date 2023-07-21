@@ -70,6 +70,8 @@ Plug 'danymat/neogen'
 Plug 'folke/trouble.nvim'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 
+Plug 'ahmedkhalf/project.nvim'
+
 call plug#end()
 
 let uname = substitute(system('uname'),'\n','','')
@@ -95,6 +97,7 @@ map <F6> :NERDTreeToggle<CR>
 nnoremap <C-a> ggVG
 autocmd BufEnter * lcd %:p:h
 map <leader>r :NERDTreeFind<cr>
+map <leader>p :Telescope projects<cr>
 noremap <Del> "_d
 
 let NERDTreeShowHidden=1

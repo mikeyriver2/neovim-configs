@@ -1,5 +1,5 @@
 vim.opt.list = true
-vim.opt.listchars:append "space:⋅"
+--vim.opt.listchars:append "space:⋅"
 vim.opt.termguicolors = true
 
 vim.cmd [[highlight IndentBlanklineIndent1 guibg=#000000 gui=nocombine]]
