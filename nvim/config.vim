@@ -29,6 +29,7 @@ call plug#begin()
 
 " Plugin Section
 
+Plug 'nvim-tree/nvim-web-devicons'
 " Plug 'yuezk/vim-js'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'lukas-reineke/indent-blankline.nvim'
@@ -71,6 +72,9 @@ Plug 'folke/trouble.nvim'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 
 Plug 'ahmedkhalf/project.nvim'
+Plug 'dstein64/vim-startuptime'
+
+Plug 'tpope/vim-surround'
 
 call plug#end()
 

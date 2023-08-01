@@ -1,5 +1,8 @@
 local cmp = require('cmp')
 
+vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#FF0000" })
+vim.cmd([[highlight Pmenu guifg=#000000 guibg=#ffffff]])
+
 cmp.setup({
     snippet = {
       -- REQUIRED - you must specify a snippet engine
