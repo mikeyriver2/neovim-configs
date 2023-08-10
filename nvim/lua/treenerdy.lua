@@ -7,5 +7,5 @@ vim.api.nvim_command([[
 )
 
 vim.api.nvim_command([[
-  map <F6> :NERDTreeFind <CR>
+  map <F6> :NERDTreeToggle <CR>
 ]])
