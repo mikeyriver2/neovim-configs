@@ -5,7 +5,7 @@ vim.opt.termguicolors = true
 vim.cmd [[highlight IndentBlanklineIndent1 guibg=#000000 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent2 guibg=#1a1a1a gui=nocombine]]
 
-vim.cmd [[highlight Grey guifg=#706f6f gui=nocombine]]
+vim.cmd [[highlight Grey guifg=#383838 gui=nocombine]]
 
 require("indent_blankline").setup {
     show_current_context = true,

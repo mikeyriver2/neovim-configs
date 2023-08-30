@@ -3,15 +3,18 @@ for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
         vim.api.nvim_set_hl(0, group, {})
 end
 
-
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "tsserver","eslint" } 
+  ensure_installed = { "tsserver","eslint", 'cssls', 'pyright' } 
 })
 
 require'lspconfig'.tsserver.setup {
+  capabilities = capabilities,
+}
+
+require'lspconfig'.pyright.setup {
   capabilities = capabilities,
 }
 
