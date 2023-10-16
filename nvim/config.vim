@@ -118,6 +118,8 @@ map <leader>r :NERDTreeFind<cr>
 map <leader>p :Telescope projects<cr>
 map <C-h> b
 map <C-l> e
+map <C-j> :tabprev<CR>
+map <C-k> :tabnext<CR>
 noremap <Del> "_d
 
 let NERDTreeShowHidden=1
