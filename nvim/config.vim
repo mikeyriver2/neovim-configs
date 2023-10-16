@@ -30,6 +30,7 @@ call plug#begin()
 " Plugin Section
 
 Plug 'nvim-tree/nvim-web-devicons'
+Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 " Plug 'yuezk/vim-js'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'lukas-reineke/indent-blankline.nvim'
@@ -63,7 +64,6 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
 Plug 'airblade/vim-rooter'
-
 Plug 'prisma/vim-prisma'
 Plug 'pantharshit00/coc-prisma'
 Plug 'danymat/neogen'
@@ -75,6 +75,7 @@ Plug 'ahmedkhalf/project.nvim'
 Plug 'dstein64/vim-startuptime'
 
 Plug 'tpope/vim-surround'
+Plug 'akinsho/git-conflict.nvim', { 'tag': '*' }
 
 call plug#end()
 
@@ -102,6 +103,8 @@ nnoremap <C-a> ggVG
 autocmd BufEnter * lcd %:p:h
 map <leader>r :NERDTreeFind<cr>
 map <leader>p :Telescope projects<cr>
+map <C-h> b
+map <C-l> e
 noremap <Del> "_d
 
 let NERDTreeShowHidden=1
