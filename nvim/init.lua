@@ -14,3 +14,9 @@ require('neogem')
 require('lualoine')
 require('nullls')
 require('project')
+
+-- Addlt maps that require most priv
+vim.api.nvim_set_keymap('n', '<C-j>', ':tabprev<CR>', { noremap = true, silent = true })
+
+-- Map <C-k> to switch to the next tab
+vim.api.nvim_set_keymap('n', '<C-k>', ':tabnext<CR>', { noremap = true, silent = true })

@@ -11,7 +11,8 @@ set nowrap!
 set expandtab               " converts tabs to white space
 set shiftwidth=2            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
-set number                  " add line numbers
+set relativenumber                 " add line numbers
+set number
 set wildmode=longest,list   " get bash-like tab completions
 filetype plugin indent on   "allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
@@ -118,8 +119,6 @@ map <leader>r :NERDTreeFind<cr>
 map <leader>p :Telescope projects<cr>
 map <C-h> b
 map <C-l> e
-map <C-j> :tabprev<CR>
-map <C-k> :tabnext<CR>
 noremap <Del> "_d
 
 let NERDTreeShowHidden=1
