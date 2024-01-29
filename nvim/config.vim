@@ -34,7 +34,7 @@ Plug 'nvim-tree/nvim-web-devicons'
 Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 " Plug 'yuezk/vim-js'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim', {'tag': 'v2.20.8'} 
 " Plug 'HerringtonDarkholme/yats.vim'
 " Plug 'maxmellon/vim-jsx-pretty'
 Plug 'nvim-lualine/lualine.nvim'
