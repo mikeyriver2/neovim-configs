@@ -114,7 +114,6 @@ endif
 
 map <F6> :NERDTreeToggle<CR>
 nnoremap <C-a> ggVG
-autocmd BufEnter * lcd %:p:h
 map <leader>r :NERDTreeFind<cr>
 map <leader>p :Telescope projects<cr>
 map <C-h> b
@@ -122,3 +121,7 @@ map <C-l> e
 noremap <Del> "_d
 
 let NERDTreeShowHidden=1
+
+call mkdir(expand('~/tmp/vim'), 'p') " create a directory $HOME/tmp/vim
+autocmd VimLeave * call writefile([getcwd()], expand('~/tmp/vim/cwd')) " on exit write the CWD to the file
+
