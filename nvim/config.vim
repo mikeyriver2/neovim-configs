@@ -30,6 +30,7 @@ call plug#begin()
 
 " Plugin Section
 
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 " Plug 'yuezk/vim-js'
