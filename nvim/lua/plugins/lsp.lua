@@ -7,10 +7,10 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "tsserver","eslint", 'cssls', 'pyright' } 
+  ensure_installed = { "ts_ls","eslint", 'cssls', 'pyright' } 
 })
 
-require'lspconfig'.tsserver.setup {
+require'lspconfig'.ts_ls.setup {
   capabilities = capabilities,
 }
 
