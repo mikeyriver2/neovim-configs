@@ -46,12 +46,12 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'scrooloose/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'mhinz/vim-startify'
-Plug 'williamboman/mason.nvim'
-Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'williamboman/mason.nvim', {'tag': 'v1.11.0'}
+Plug 'williamboman/mason-lspconfig.nvim', {'tag': 'v1.30.0'}
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'neovim/nvim-lspconfig'
@@ -71,13 +71,28 @@ Plug 'pantharshit00/coc-prisma'
 Plug 'danymat/neogen'
 
 Plug 'folke/trouble.nvim'
-Plug 'jose-elias-alvarez/null-ls.nvim'
+"Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'nvimtools/none-ls.nvim'
+Plug 'nvimtools/none-ls-extras.nvim'
 
 Plug 'ahmedkhalf/project.nvim'
 Plug 'dstein64/vim-startuptime'
 
 Plug 'tpope/vim-surround'
 Plug 'akinsho/git-conflict.nvim', { 'tag': '*' }
+
+Plug 'nvim-java/lua-async-await'
+Plug 'nvim-java/nvim-java-refactor'
+Plug 'nvim-java/nvim-java-core'
+Plug 'nvim-java/nvim-java-test'
+Plug 'nvim-java/nvim-java-dap'
+
+Plug 'mfussenegger/nvim-dap'
+Plug 'neovim/nvim-lspconfig'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'nvim-java/nvim-java' 
+Plug 'JavaHello/spring-boot.nvim'
+Plug 'kdheepak/lazygit.nvim'
 
 call plug#end()
 
@@ -112,6 +127,12 @@ if uname == 'Linux'
         \ }
     endif
 endif
+
+" Save last position in file
+autocmd BufReadPost *
+	\ if line("'\"") > 1 && line("'\"") <= line("$") |
+	\   execute "normal! g`\"" |
+	\ endif
 
 map <F6> :NERDTreeToggle<CR>
 nnoremap <C-a> ggVG

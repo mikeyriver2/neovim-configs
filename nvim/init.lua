@@ -15,6 +15,7 @@ require('neogem')
 require('lualoine')
 require('nullls')
 require('project')
+require('java-nvim-c')
 
 -- Addlt maps that require most priv
 vim.api.nvim_set_keymap('n', '<C-j>', ':tabprev<CR>', { noremap = true, silent = true })
