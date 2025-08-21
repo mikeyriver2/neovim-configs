@@ -94,6 +94,23 @@ Plug 'nvim-java/nvim-java'
 Plug 'JavaHello/spring-boot.nvim'
 Plug 'kdheepak/lazygit.nvim'
 
+" Deps
+Plug 'nvim-lua/plenary.nvim'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'MeanderingProgrammer/render-markdown.nvim'
+
+" Optional deps
+Plug 'hrsh7th/nvim-cmp'
+Plug 'nvim-tree/nvim-web-devicons' "or Plug 'echasnovski/mini.icons'
+Plug 'HakonHarnes/img-clip.nvim'
+Plug 'zbirenbaum/copilot.lua'
+Plug 'stevearc/dressing.nvim' " for enhanced input UI
+Plug 'folke/snacks.nvim' " for modern input UI
+
+" Yay, pass source=true if you want to build from source
+Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+
+
 call plug#end()
 
 let uname = substitute(system('uname'),'\n','','')
@@ -146,4 +163,3 @@ let NERDTreeShowHidden=1
 
 call mkdir(expand('~/tmp/vim'), 'p') " create a directory $HOME/tmp/vim
 autocmd VimLeave * call writefile([getcwd()], expand('~/tmp/vim/cwd')) " on exit write the CWD to the file
-
