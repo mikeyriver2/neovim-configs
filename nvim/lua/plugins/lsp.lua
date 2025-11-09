@@ -10,29 +10,29 @@ require("mason-lspconfig").setup({
   ensure_installed = { "tsserver","eslint", 'cssls', 'pyright' } 
 })
 
-require'lspconfig'.tsserver.setup {
+-- Define configs via vim.lsp.config
+vim.lsp.config("tsserver", {
   capabilities = capabilities,
-}
+  -- add other settings if needed
+})
 
-require'lspconfig'.ts_ls.setup {
+vim.lsp.config("eslint", {
   capabilities = capabilities,
-}
+})
 
-require'lspconfig'.eslint.setup {
+vim.lsp.config("cssls", {
   capabilities = capabilities,
-}
+})
 
-require'lspconfig'.pyright.setup {
+vim.lsp.config("pyright", {
   capabilities = capabilities,
-}
+})
 
-require'lspconfig'.prismals.setup {
-  capabilities = capabilities,
-}
-
-require'lspconfig'.cssls.setup{
-  capabilities = capabilities
-}
+-- Enable the servers
+vim.lsp.enable("ts_ls")
+vim.lsp.enable("eslint")
+vim.lsp.enable("cssls")
+vim.lsp.enable("pyright")
 
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
