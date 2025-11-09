@@ -81,17 +81,17 @@ Plug 'dstein64/vim-startuptime'
 Plug 'tpope/vim-surround'
 Plug 'akinsho/git-conflict.nvim', { 'tag': '*' }
 
-Plug 'nvim-java/lua-async-await'
-Plug 'nvim-java/nvim-java-refactor'
-Plug 'nvim-java/nvim-java-core'
-Plug 'nvim-java/nvim-java-test'
-Plug 'nvim-java/nvim-java-dap'
+"Plug 'nvim-java/lua-async-await'
+"Plug 'nvim-java/nvim-java-refactor'
+"Plug 'nvim-java/nvim-java-core'
+"Plug 'nvim-java/nvim-java-test'
+"Plug 'nvim-java/nvim-java-dap'
+"Plug 'nvim-java/nvim-java' 
+"Plug 'JavaHello/spring-boot.nvim'
 
 Plug 'mfussenegger/nvim-dap'
 Plug 'neovim/nvim-lspconfig'
 Plug 'MunifTanjim/nui.nvim'
-Plug 'nvim-java/nvim-java' 
-Plug 'JavaHello/spring-boot.nvim'
 Plug 'kdheepak/lazygit.nvim'
 
 " Deps
