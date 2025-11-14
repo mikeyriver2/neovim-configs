@@ -1,6 +1,8 @@
 vim.cmd('source ~/.config/nvim/config.vim')
 require('plugins/lsp')
+require('luasnipsnip')
 require('completions')
+require('sessionz')
 require('jsx_pretty')
 require('telescope_map')
 require('lazygitty')
