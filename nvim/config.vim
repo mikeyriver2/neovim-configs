@@ -52,6 +52,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'mhinz/vim-startify'
 Plug 'williamboman/mason.nvim', {'tag': 'v1.11.0'}
 Plug 'williamboman/mason-lspconfig.nvim', {'tag': 'v1.30.0'}
+Plug 'WhoIsSethDaniel/mason-tool-installer.nvim'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'neovim/nvim-lspconfig'
@@ -115,7 +116,7 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'} " Replace <CurrentMajor> by the latest released major (first number of latest release)
 Plug 'mlaursen/vim-react-snippets'
 
-Plug 'rmagatti/auto-session'
+"Plug 'rmagatti/auto-session'
 
 call plug#end()
 
@@ -165,6 +166,8 @@ map <C-h> b
 map <C-l> e
 noremap <Del> "_d
 xnoremap p "_dP
+" Prevent Ctrl-V from overwriting clipboard when pasting in visual mode
+xnoremap <C-v> "_dP
 
 let NERDTreeShowHidden=1
 
