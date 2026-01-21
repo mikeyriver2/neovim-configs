@@ -1,7 +1,30 @@
 local cmp = require('cmp')
+local lsp = vim.lsp.protocol.CompletionItemKind
 
 vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#FF0000" })
 vim.cmd([[highlight Pmenu guifg=#000000 guibg=#ffffff]])
+
+
+-- Function to modify LSP completion items
+local function fix_tsx_completion(entry, item)
+    -- Completion kinds commonly used for string/value attributes in TSX/JSX
+    local attribute_kinds = {
+        lsp.Text, 
+        lsp.Color, 
+        lsp.Enum, 
+        lsp.Value, 
+        lsp.Field
+    }
+
+    if vim.tbl_contains(attribute_kinds, item.kind) then
+        -- This forces nvim-cmp to use basic text insertion instead of the 
+        -- LSP's textEdit, preventing the aggressive overwrite.
+        item.textEdit = nil
+    end
+
+    -- Always return true to keep the entry in the list
+    return true
+end
 
 cmp.setup({
     snippet = {
@@ -14,7 +37,10 @@ cmp.setup({
       end,
     },
     sources = cmp.config.sources({
-      { name = 'nvim_lsp' },
+      {
+        name = 'nvim_lsp',
+        entry_filter = fix_tsx_completion,
+      },
       -- { name = 'vsnip' }, -- For vsnip users.
       { name = 'luasnip' }, -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.

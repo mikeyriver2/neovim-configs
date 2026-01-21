@@ -1,7 +1,7 @@
 require("avante").setup({
 	---@alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | string
 	---@type Provider
-	provider = "gemini", -- The provider used in Aider mode or in the planning phase of Cursor Planning ModeA
+	provider = "openai", -- The provider used in Aider mode or in the planning phase of Cursor Planning ModeA
 	---@alias Mode "agentic" | "legacy"
 	---@type Mode
 	mode = "agentic", -- The default mode for interaction. "agentic" uses tools to automatically generate code, "legacy" uses the old planning method to generate code.
@@ -34,8 +34,8 @@ require("avante").setup({
 			endpoint = "https://api.openai.com/v1",
 			model = "gpt-4.1-mini",
 			extra_request_body = {
-				temperature = 0.75,
-				max_tokens = 4096,
+        temperature = 0.2,
+        max_tokens = 4096,
 			},
 		},
 	},

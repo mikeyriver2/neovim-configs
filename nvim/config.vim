@@ -111,12 +111,13 @@ Plug 'folke/snacks.nvim' " for modern input UI
 " Yay, pass source=true if you want to build from source
 Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
 
+Plug 'NickvanDyke/opencode.nvim'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'} " Replace <CurrentMajor> by the latest released major (first number of latest release)
 Plug 'mlaursen/vim-react-snippets'
 
-"Plug 'rmagatti/auto-session'
+Plug 'rmagatti/auto-session'
 
 call plug#end()
 
@@ -166,6 +167,7 @@ map <C-h> b
 map <C-l> e
 noremap <Del> "_d
 xnoremap p "_dP
+vnoremap c "_c
 " Prevent Ctrl-V from overwriting clipboard when pasting in visual mode
 xnoremap <C-v> "_dP
 

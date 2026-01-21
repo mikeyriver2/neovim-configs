@@ -8,7 +8,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require("mason").setup()
 
 require("mason-lspconfig").setup({
-  ensure_installed = { "tsserver","eslint", 'cssls', 'pyright' }
+  ensure_installed = { "tsserver","eslint", 'cssls', 'pyright', 'prismals' }
 })
 
 require("mason-tool-installer").setup({
@@ -31,6 +31,10 @@ vim.lsp.config("eslint", {
   capabilities = capabilities,
 })
 
+vim.lsp.config("prismals", {
+  capabilities = capabilities,
+})
+
 vim.lsp.config("prettier", {
   capabilities = capabilities,
 })
@@ -45,6 +49,7 @@ vim.lsp.config("pyright", {
 
 -- Enable the servers
 vim.lsp.enable("tsserver")
+vim.lsp.enable("prismals")
 vim.lsp.enable("ts_ls")
 vim.lsp.enable("prettier")
 vim.lsp.enable("eslint")
