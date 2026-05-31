@@ -19,7 +19,7 @@ require('lualoine')
 require('nullls')
 require('project')
 --require('java-nvim-c')
-require('avente-ai')
+--require('avente-ai')
 
 -- Addlt maps that require most priv
 vim.api.nvim_set_keymap('n', '<C-j>', ':tabprev<CR>', { noremap = true, silent = true })

@@ -34,7 +34,7 @@ Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 " Plug 'yuezk/vim-js'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'branch': 'master'}
 Plug 'lukas-reineke/indent-blankline.nvim', {'tag': 'v2.20.8'} 
 " Plug 'HerringtonDarkholme/yats.vim'
 " Plug 'maxmellon/vim-jsx-pretty'
@@ -109,7 +109,7 @@ Plug 'stevearc/dressing.nvim' " for enhanced input UI
 Plug 'folke/snacks.nvim' " for modern input UI
 
 " Yay, pass source=true if you want to build from source
-Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+"Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
 
 Plug 'NickvanDyke/opencode.nvim'
 Plug 'rafamadriz/friendly-snippets'
@@ -163,6 +163,7 @@ map <F6> :NERDTreeToggle<CR>
 nnoremap <C-a> ggVG
 map <leader>r :NERDTreeFind<cr>
 map <leader>p :Telescope projects<cr>
+nnoremap <leader>vr <cmd>lua vim.lsp.buf.rename()<CR>
 map <C-h> b
 map <C-l> e
 noremap <Del> "_d
